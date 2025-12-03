@@ -7,7 +7,7 @@ public class PuzzleGameController : MonoBehaviour
     // Ganti ini dengan nama Scene Menu Utama atau Scene Pilihan Level Anda
     private const string MainSceneName = "Main";
     // Ganti ini dengan nama scene level berikutnya (jika ada)
-    private const string NextLevelSceneName = "Level2";
+    private const string NextLevelSceneName = "LevelDua";
 
     [Header("Puzzle Elements")]
     [SerializeField]
