@@ -137,6 +137,7 @@ public class PuzzleGameController : MonoBehaviour
             if (!Mathf.Approximately(zRotation, 0f) &&
                 !Mathf.Approximately(zRotation, 360f))
             {
+                Debug.Log("belumm");
                 allCorrect = false;
                 break;
             }
