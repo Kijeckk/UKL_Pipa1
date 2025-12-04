@@ -1,13 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEditor.EditorTools;
 
 public class PuzzleGameController : MonoBehaviour
 {
-    // Ganti ini dengan nama Scene Menu Utama atau Scene Pilihan Level Anda
-    private const string MainSceneName = "Main";
-    // Ganti ini dengan nama scene level berikutnya (jika ada)
-    private const string NextLevelSceneName = "Level2";
+    [Header("sceneNames")]
+    [Tooltip("scene utama")]
+    [SerializeField]
+    private string MainSceneName = "LevelSelect";
+    
+    [Tooltip("manual input sendiri nama scene nya")]
+    [SerializeField]
+    private string nextLevelSceneName = "";
 
     [Header("Puzzle Elements")]
     [SerializeField]
@@ -17,6 +23,19 @@ public class PuzzleGameController : MonoBehaviour
     [Tooltip("Seret (drag) Panel UI Finish/Pop-up ke sini.")]
     [SerializeField]
     private GameObject finishPanel; // Panel yang akan muncul saat menang
+    [SerializeField]
+    private GameObject GameOverPanel;
+
+    [Header("Timer Settings")]
+    [Tooltip("buat setiap detiknya")]
+    [SerializeField]
+    private float totalTime = 60f;
+
+    [Tooltip("drag ke sini tmp nya")]
+    [SerializeField]
+    private TextMeshProUGUI timerText;
+    private float timeLeft;
+    private bool isTimeUp = false;
 
     public static bool youWin;
 
@@ -30,15 +49,62 @@ public class PuzzleGameController : MonoBehaviour
         {
             finishPanel.SetActive(false);
         }
+        if (GameOverPanel != null)
+        {
+            GameOverPanel.SetActive(false);
+        }
+       
         youWin = false;
+        isTimeUp = false;
+        timeLeft = totalTime;
         RandomizePuzzles();
+
+        UpdateTimerDisplay(timeLeft);
     }
 
     void Update()
     {
+        if (youWin || isTimeUp)
+        {
+            return;
+        }
         CheckWinCondition();
+        UpdateTimer();
     }
 
+    void UpdateTimer()
+    {
+        if (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+
+            if (timerText != null)
+            {
+              UpdateTimerDisplay(timeLeft);
+            }
+        }
+        else
+        {
+            
+            timeLeft = 0;
+            isTimeUp = true;
+
+            UpdateTimerDisplay(0);
+            
+            
+            if (GameOverPanel != null)
+            {
+                GameOverPanel.SetActive(true);
+            }
+            
+            if (timerText != null)
+            {
+                timerText.text = "00:00"; 
+            }
+            
+            Debug.Log("Waktu Habis! Game Over.");
+        }
+    }
     void RandomizePuzzles()
     {
         foreach (Transform symbolTransform in simbol)
@@ -98,15 +164,27 @@ public class PuzzleGameController : MonoBehaviour
     // Dipanggil saat tombol "Next Level" di panel diklik
     public void LoadNextLevel()
     {
-        // Asumsi: Level berikutnya ada
-        SceneManager.LoadScene(NextLevelSceneName);
+      if (!string.IsNullOrEmpty(nextLevelSceneName))
+        {
+            SceneManager.LoadScene(nextLevelSceneName);
+        }
+        else
+        {
+            Debug.LogWarning("Next Level Scene Name belum diatur atau kosong. Tidak bisa memuat scene.");
+        }
     }
 
     // Dipanggil saat tombol "Pilihan Level" di panel diklik
     public void LoadLevelSelect()
     {
-        // Kembali ke Scene Menu Utama / Pilihan Level
-        SceneManager.LoadScene(MainSceneName);
+       if (!string.IsNullOrEmpty(MainSceneName))
+        {
+            SceneManager.LoadScene(MainSceneName);
+        }
+        else
+        {
+             Debug.LogError("Main Scene Name belum diatur atau kosong! Gagal kembali ke Menu Utama.");
+        }
     }
 
     // Dipanggil saat tombol "Restart" di panel diklik
@@ -115,4 +193,24 @@ public class PuzzleGameController : MonoBehaviour
         // Muat ulang scene saat ini
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+void UpdateTimerDisplay(float timeToDisplay)
+{
+    if (timerText == null) return;
+    
+    if (timeToDisplay < 0)
+    {
+        timeToDisplay = 0;
+    }
+
+    
+    float minutesFloat = Mathf.Floor(timeToDisplay / 60);
+    float secondsFloat = timeToDisplay % 60;
+    
+ 
+    string minutes = minutesFloat.ToString("00"); 
+    string seconds = secondsFloat.ToString("00"); 
+
+    timerText.text = minutes + ":" + seconds;
+}
 }
