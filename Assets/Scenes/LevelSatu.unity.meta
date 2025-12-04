@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Assets/Scenes/LevelDua 1.unity.meta
+guid: e3e7212ad011e814daa8b1456c5442c2
+DefaultImporter:
+========
+guid: 40a88ff7eaa49ce478d4d0ec21087ee7
+NativeFormatImporter:
+>>>>>>>> Stashed changes:Assets/BGM & SFX/SettingsAudioMixer.mixer.meta
+=======
+<<<<<<<< Updated upstream:Assets/BGM & SFX/SettingsAudioMixer.mixer.meta
+guid: 40a88ff7eaa49ce478d4d0ec21087ee7
+NativeFormatImporter:
+========
+guid: d08c6fd6131d9474ca2ad7db76f660a5
+DefaultImporter:
+>>>>>>>> Stashed changes:Assets/Scenes/LevelDua 1.unity.meta
+>>>>>>> Stashed changes
+  externalObjects: {}
+  mainObjectFileID: 24100000
+=======
+guid: d08c6fd6131d9474ca2ad7db76f660a5
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

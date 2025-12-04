@@ -7,4 +7,10 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelect");
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game Exited");
+    }
 }

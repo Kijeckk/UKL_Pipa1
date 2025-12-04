@@ -5,24 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - StartPipe
-  - FinishPipe
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  - BACKGROUND
-=======
   - Audio
->>>>>>> Stashed changes
-=======
-  - Audio
->>>>>>> Stashed changes
-=======
-  - Audio
->>>>>>> Stashed changes
-=======
-  - Audio
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -57,15 +40,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: 0
-    uniqueID: 2754647655
-    locked: 0
-  - name: 1
-    uniqueID: 1000816759
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: New Layer 3
-    uniqueID: 3556024159
     locked: 0
