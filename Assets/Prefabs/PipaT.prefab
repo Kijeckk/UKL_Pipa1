@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8978195557860366642}
   - component: {fileID: 4767627495249137921}
-  - component: {fileID: 5781579139054866660}
   m_Layer: 0
   m_Name: PipaT
   m_TagString: Untagged
@@ -85,23 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5781579139054866660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8125777406197808346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44851aa0e533fe14193717fbbb8dd2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 3
-  isRotatable: 1
-  up: 0
-  down: 1
-  left: 1
-  right: 1
-  gridX: 0
-  gridY: 0
