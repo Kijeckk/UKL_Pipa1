@@ -6,6 +6,7 @@ TagManager:
   tags:
   - StartPipe
   - Audio
+  - BACKGROUND
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: 0
+    uniqueID: 2603063597
+    locked: 0
+  - name: 1
+    uniqueID: 1608592507
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

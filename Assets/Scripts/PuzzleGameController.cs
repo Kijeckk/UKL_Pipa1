@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-//using TMPro;
+using TMPro;
 using UnityEditor.EditorTools;
 
 public class PuzzleGameController : MonoBehaviour
@@ -23,19 +23,19 @@ public class PuzzleGameController : MonoBehaviour
     [Tooltip("Seret (drag) Panel UI Finish/Pop-up ke sini.")]
     [SerializeField]
     private GameObject finishPanel; // Panel yang akan muncul saat menang
-    //[SerializeField]
-    //private GameObject GameOverPanel;
+    [SerializeField]
+    private GameObject GameOverPanel;
 
-    //[Header("Timer Settings")]
-    //[Tooltip("buat setiap detiknya")]
-    //[SerializeField]
-    //private float totalTime = 60f;
+    [Header("Timer Settings")]
+    [Tooltip("buat setiap detiknya")]
+    [SerializeField]
+    private float totalTime = 60f;
 
-    //[Tooltip("drag ke sini tmp nya")]
-    //[SerializeField]
-    //private TextMeshProUGUI timerText;
-    //private float timeLeft;
-    //private bool isTimeUp = false;
+    [Tooltip("drag ke sini tmp nya")]
+    [SerializeField]
+    private TextMeshProUGUI timerText;
+    private float timeLeft;
+    private bool isTimeUp = false;
 
     public static bool youWin;
 
@@ -49,61 +49,61 @@ public class PuzzleGameController : MonoBehaviour
         {
             finishPanel.SetActive(false);
         }
-        //if (GameOverPanel != null)
-        //{
-        //    GameOverPanel.SetActive(false);
-        //}
+        if (GameOverPanel != null)
+        {
+           GameOverPanel.SetActive(false);
+        }
        
-        //youWin = false;
-        //isTimeUp = false;
-        //timeLeft = totalTime;
+        youWin = false;
+        isTimeUp = false;
+        timeLeft = totalTime;
         RandomizePuzzles();
 
-        //UpdateTimerDisplay(timeLeft);
+        UpdateTimerDisplay(timeLeft);
     }
 
     void Update()
     {
-        //if (youWin || isTimeUp)
-        //{
-        //    return;
-        //}
+        if (youWin || isTimeUp)
+        {
+           return;
+        }
         CheckWinCondition();
-        //UpdateTimer();
+        UpdateTimer();
     }
 
-    //void UpdateTimer()    //{
-    //    if (timeLeft > 0)
-    //    {
-    //        timeLeft -= Time.deltaTime;
+    void UpdateTimer()    {
+       if (timeLeft > 0)
+       {
+           timeLeft -= Time.deltaTime;
 
-    //        if (timerText != null)
-    //        {
-    //          UpdateTimerDisplay(timeLeft);
-    //        }
-    //    }
-    //    else
-    //    {
+           if (timerText != null)
+           {
+             UpdateTimerDisplay(timeLeft);
+           }
+       }
+       else
+       {
             
-    //        timeLeft = 0;
-    //        isTimeUp = true;
+           timeLeft = 0;
+           isTimeUp = true;
 
-    //        UpdateTimerDisplay(0);
+           UpdateTimerDisplay(0);
             
             
-    //        if (GameOverPanel != null)
-    //        {
-    //            GameOverPanel.SetActive(true);
-    //        }
+           if (GameOverPanel != null)
+           {
+               GameOverPanel.SetActive(true);
+           }
             
-    //        if (timerText != null)
-    //        {
-    //            timerText.text = "00:00"; 
-    //        }
+           if (timerText != null)
+           {
+               timerText.text = "00:00"; 
+           }
             
-    //        Debug.Log("Waktu Habis! Game Over.");
-    //    }
-    //}
+           Debug.Log("Waktu Habis! Game Over.");
+       }
+    }
 
     void RandomizePuzzles()
     {
@@ -195,23 +195,23 @@ public class PuzzleGameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-//void UpdateTimerDisplay(float timeToDisplay)
-//{
-//    if (timerText == null) return;
+void UpdateTimerDisplay(float timeToDisplay)
+{
+   if (timerText == null) return;
     
-//    if (timeToDisplay < 0)
-//    {
-//        timeToDisplay = 0;
-//    }
+   if (timeToDisplay < 0)
+   {
+       timeToDisplay = 0;
+   }
 
     
-//    float minutesFloat = Mathf.Floor(timeToDisplay / 60);
-//    float secondsFloat = timeToDisplay % 60;
+   float minutesFloat = Mathf.Floor(timeToDisplay / 60);
+   float secondsFloat = timeToDisplay % 60;
     
  
-//    string minutes = minutesFloat.ToString("00"); 
-//    string seconds = secondsFloat.ToString("00"); 
+   string minutes = minutesFloat.ToString("00"); 
+   string seconds = secondsFloat.ToString("00"); 
 
-//    timerText.text = minutes + ":" + seconds;
-//}
+   timerText.text = minutes + ":" + seconds;
+}
 }

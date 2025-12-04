@@ -254,6 +254,9 @@ MonoBehaviour:
   - {fileID: 413031154}
   - {fileID: 489620568}
   finishPanel: {fileID: 1467935563}
+  GameOverPanel: {fileID: 0}
+  totalTime: 60
+  timerText: {fileID: 0}
 --- !u!4 &69075667
 Transform:
   m_ObjectHideFlags: 0
