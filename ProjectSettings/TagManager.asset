@@ -6,7 +6,11 @@ TagManager:
   tags:
   - StartPipe
   - FinishPipe
+<<<<<<< Updated upstream
   - BACKGROUND
+=======
+  - Audio
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
