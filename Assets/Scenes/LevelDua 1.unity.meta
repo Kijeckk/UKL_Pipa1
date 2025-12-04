@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Scenes/LevelDua 1.unity.meta
 guid: d08c6fd6131d9474ca2ad7db76f660a5
 DefaultImporter:
+========
+guid: 40a88ff7eaa49ce478d4d0ec21087ee7
+NativeFormatImporter:
+>>>>>>>> Stashed changes:Assets/BGM & SFX/SettingsAudioMixer.mixer.meta
   externalObjects: {}
+  mainObjectFileID: 24100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
