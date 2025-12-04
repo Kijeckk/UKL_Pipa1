@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
 
         //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagment>();
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagment>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagment>();    
 
 
         SettingsPanel.gameObject.SetActive(false);
