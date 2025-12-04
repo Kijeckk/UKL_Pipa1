@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<<< Updated upstream:Assets/Scenes/LevelDua 1.unity.meta
 guid: d08c6fd6131d9474ca2ad7db76f660a5
 DefaultImporter:
@@ -18,6 +19,11 @@ DefaultImporter:
 >>>>>>> Stashed changes
   externalObjects: {}
   mainObjectFileID: 24100000
+=======
+guid: d08c6fd6131d9474ca2ad7db76f660a5
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

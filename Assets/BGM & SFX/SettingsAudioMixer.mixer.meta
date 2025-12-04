@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 <<<<<<<< Updated upstream:Assets/BGM & SFX/SettingsAudioMixer.mixer.meta
 guid: 40a88ff7eaa49ce478d4d0ec21087ee7
 NativeFormatImporter:
@@ -6,6 +7,10 @@ NativeFormatImporter:
 guid: d08c6fd6131d9474ca2ad7db76f660a5
 DefaultImporter:
 >>>>>>>> Stashed changes:Assets/Scenes/LevelDua 1.unity.meta
+=======
+guid: 40a88ff7eaa49ce478d4d0ec21087ee7
+NativeFormatImporter:
+>>>>>>> Stashed changes
   externalObjects: {}
   mainObjectFileID: 24100000
   userData: 
