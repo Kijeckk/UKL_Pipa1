@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainSceneName: LevelSelect
-  nextLevelSceneName: LevelSelect
+  nextLevelSceneName: 
   simbol:
   - {fileID: 801331720}
   - {fileID: 1228355256}
@@ -3243,7 +3243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6278325442422329846, guid: 15b1bc5f9307d5b47b0ad454cf2c331f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 6278325442422329846, guid: 15b1bc5f9307d5b47b0ad454cf2c331f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3802,7 +3802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6278325442422329846, guid: 15b1bc5f9307d5b47b0ad454cf2c331f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.18
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6278325442422329846, guid: 15b1bc5f9307d5b47b0ad454cf2c331f, type: 3}
       propertyPath: m_LocalPosition.z
