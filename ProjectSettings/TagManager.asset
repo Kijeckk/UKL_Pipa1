@@ -6,6 +6,7 @@ TagManager:
   tags:
   - StartPipe
   - FinishPipe
+  - BACKGROUND
   layers:
   - Default
   - TransparentFX
