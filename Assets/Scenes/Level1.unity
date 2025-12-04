@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f7d2e8d7f7eaf4993820268fa1a43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainSceneName: LevelSelect
+  nextLevelSceneName: LevelDua
   simbol:
   - {fileID: 1310071280}
   - {fileID: 801331720}
@@ -162,6 +164,9 @@ MonoBehaviour:
   - {fileID: 1475626715}
   - {fileID: 405624370}
   finishPanel: {fileID: 1747484501}
+  GameOverPanel: {fileID: 0}
+  totalTime: 0
+  timerText: {fileID: 0}
 --- !u!4 &69075667
 Transform:
   m_ObjectHideFlags: 0
@@ -737,7 +742,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1044107275173502419, guid: 3be86b40d5175174b9139e1c7505dee4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

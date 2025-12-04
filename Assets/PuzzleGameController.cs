@@ -9,7 +9,7 @@ public class PuzzleGameController : MonoBehaviour
     [Header("sceneNames")]
     [Tooltip("scene utama")]
     [SerializeField]
-    private string MainSceneName = "Main";
+    private string MainSceneName = "LevelSelect";
     
     [Tooltip("manual input sendiri nama scene nya")]
     [SerializeField]

@@ -173,6 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f7d2e8d7f7eaf4993820268fa1a43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainSceneName: LevelSelect
+  nextLevelSceneName: LevelTiga
   simbol:
   - {fileID: 1310071280}
   - {fileID: 982636803}
@@ -192,6 +194,9 @@ MonoBehaviour:
   - {fileID: 888633844}
   - {fileID: 1273816819}
   finishPanel: {fileID: 1467935563}
+  GameOverPanel: {fileID: 0}
+  totalTime: 60
+  timerText: {fileID: 0}
 --- !u!4 &69075667
 Transform:
   m_ObjectHideFlags: 0
