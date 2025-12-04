@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEditor.EditorTools;
+using UnityEditor;
 
 public class PuzzleGameController : MonoBehaviour
 {
